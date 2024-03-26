@@ -146,7 +146,7 @@ export class XrayCloud implements Xray {
         },
         body: data,
         responseType: 'json',
-        timeout: 60000, // 60s timeout
+        timeout: 180000, // 180s timeout
         retry: 2, // retry count for some requests
         http2: true // try to allow http2 requests
       })
