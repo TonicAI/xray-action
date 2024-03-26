@@ -134,7 +134,7 @@ export class XrayCloud implements Xray {
         return ''
       }
     } else {
-      const endpoint = `${this.xrayBaseUrl.href}/api/v2/import/execution${format}`
+      const endpoint = `${this.xrayBaseUrl.href}api/v2/import/execution${format}`
       core.debug(`Using endpoint: ${endpoint}`)
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -602,7 +602,7 @@ class XrayCloud {
                 },
                 body: data,
                 responseType: 'json',
-                timeout: 60000, // 60s timeout
+                timeout: 180000, // 180s timeout
                 retry: 2, // retry count for some requests
                 http2: true // try to allow http2 requests
             });
@@ -795,7 +795,7 @@ class XrayServer {
                     },
                     body: data,
                     responseType: 'json',
-                    timeout: 60000 // 60s timeout
+                    timeout: 180000, // 180s timeout
                 });
                 try {
                     if (core.isDebug()) {
@@ -40488,7 +40488,7 @@ const gracefullyClose = session => {
 };
 
 class Agent extends EventEmitter {
-	constructor({timeout = 60000, maxSessions = Infinity, maxFreeSessions = 10, maxCachedTlsSessions = 100} = {}) {
+	constructor({timeout = 180000, maxSessions = Infinity, maxFreeSessions = 10, maxCachedTlsSessions = 100} = {}) {
 		super();
 
 		// A session is considered busy when its current streams count
