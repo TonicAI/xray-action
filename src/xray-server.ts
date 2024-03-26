@@ -181,7 +181,7 @@ export class XrayServer implements Xray {
           },
           body: data,
           responseType: 'json',
-          timeout: 60000 // 60s timeout
+          timeout: 180000, // 180s timeout
         })
         try {
           if (core.isDebug()) {
